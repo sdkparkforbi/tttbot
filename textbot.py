@@ -79,18 +79,10 @@ def create_prompt(df, query):
 
     return messages
 
-# def generate_response(messages):
-#     result = openai.ChatCompletion.create(
-#         model="gpt-3.5-turbo",
-#         messages=messages,
-#         temperature=0.4,
-#         max_tokens=500)
-#     return result['choices'][0]['message']['content']
-
 # GPT에게 질문
 def ask_gpt(messages):
     headers = {
-        "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
+        "Authorization": f"Bearer {st.secrets["OPENAI_API_KEY"]}",
         "Content-Type": "application/json"
     }
 

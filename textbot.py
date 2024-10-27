@@ -14,7 +14,7 @@ import json
 # 모든 캐시 데이터 삭제
 st.cache_data.clear()  # st.cache를 사용한 경우 st.cache.clear()를 사용하세요
 
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = st.secrets['OPENAI_API_KEY']
 
 MODEL_GPT = "gpt-4o-mini-2024-07-18"
 

@@ -98,7 +98,7 @@ def ask_gpt(messages):
     content = json.loads(response.content)
     return content['choices'][0]['message']['content'].strip()
 
-st.image('images/ddc.jpg')
+st.image('images/images.png')
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
@@ -107,7 +107,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = []
 
 with st.form('form', clear_on_submit=True):
-    user_input = st.text_input('동두천시의 뉴스에 대해 물어보세요!', '', key='input')
+    user_input = st.text_input('경기북부도시들의 뉴스에 대해 물어보세요!', '', key='input')
     submitted = st.form_submit_button('Send')
 
 if submitted and user_input:
